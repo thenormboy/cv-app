@@ -1,23 +1,19 @@
 function General() {
     return (
         <>
-        <div className="generalContainer">
+        <form className="general-container">
             <h2>General Info</h2>
-            <form>
-                <label>
-                    Last Name<input />
-                </label>  
-                <label>
-                    Email<input />
-                </label> 
-                <label>
-                    Phone Number<input />
-                </label> 
-                <label>
-                    Address<input />
-                </label> 
-            </form>
-        </div>
+            <div className="input-container">
+                <label htmlFor='full-name'>Last Name</label>
+                <input type="text" id="full-name" placeholder="First and Last Name" />  
+                <label htmlFor="email">Email</label>
+                <input type="text" id="email" placeholder="example@email.com" />  
+                <label htmlFor="phone-number">Phone Number</label>
+                <input type="text" id="phone-number" placeholder="(123) 456-7890" />   
+                <label htmlFor="address">Address</label>
+                <input type="text" id="address" placeholder="City, Province" />   
+            </div>
+        </form>
         </>
     )
 }

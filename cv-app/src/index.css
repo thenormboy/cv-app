@@ -67,7 +67,26 @@ button:focus-visible {
   }
 }
 
-.generalContainer {
+.container {
+  display: flex;
+  gap: 24px;
+  margin: auto;
+  max-width: 1500px;
+  padding: 32px 24px;
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 28px;
+
+  height: fit-content;
+  max-width: 750px;
+}
+
+.general-container {
   display: block;
   flex-direction: column;
 
@@ -77,14 +96,22 @@ button:focus-visible {
   border-radius: 12px;
 }
 
-.generalContainer h2 {
+.general-container h2 {
   margin-bottom: 14px;
 }
 
-.generalContainer form {
+.input-container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 
   gap: 6px;
   margin-bottom: 12px;
+}
+
+.input-container input{
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 10px;
+  transition: border .25s, black .25s;
 }

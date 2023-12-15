@@ -5,6 +5,10 @@ import General from './General.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <General />
+    <div className='container'>
+      <div className='form-container'>
+        <General />
+      </div>
+    </div>
   </React.StrictMode>,
 )
