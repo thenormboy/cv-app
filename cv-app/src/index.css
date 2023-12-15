@@ -66,3 +66,25 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.generalContainer {
+  display: block;
+  flex-direction: column;
+
+  background-color: #fff;
+  color: black;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.generalContainer h2 {
+  margin-bottom: 14px;
+}
+
+.generalContainer form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+  margin-bottom: 12px;
+}
