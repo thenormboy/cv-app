@@ -1,4 +1,4 @@
-function General() {
+export default function General() {
     return (
         <>
         <form className="general-container">
@@ -17,5 +17,3 @@ function General() {
         </>
     )
 }
-
-export default General

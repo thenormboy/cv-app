@@ -22,10 +22,11 @@ a:hover {
   color: #535bf2;
 }
 
-body {
+
+
+#root {
+  width: 100vw;
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -46,13 +47,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -69,6 +64,7 @@ button:focus-visible {
 
 .container {
   display: flex;
+  justify-content: center;
   gap: 24px;
   margin: auto;
   max-width: 1500px;
@@ -83,7 +79,7 @@ button:focus-visible {
   gap: 28px;
 
   height: fit-content;
-  max-width: 750px;
+  max-width: 550px;
 }
 
 .general-container {
@@ -114,4 +110,31 @@ button:focus-visible {
   border-radius: 12px;
   padding: 10px;
   transition: border .25s, black .25s;
+}
+
+.education-button {
+  width: 100%;
+  background-color: white;
+  color: black;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-button {
+  width: 100%;
+  background-color: white;
+  color: black;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume-container {
+  background-color: white;
+
+  height: 29.7cm;
+  width: 21cm;
 }
