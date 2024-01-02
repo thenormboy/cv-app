@@ -1,34 +1,37 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import General from './General.jsx'
+import Education from './Education.jsx'
+import Experience from './Experience.jsx'
+import Resume from './Resume.jsx'
+
+import { generalItem } from './objects.js'
+import './index.css'
+
+let basicInfo = generalItem('ex','','','')
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [renderState, setRenderState] = useState(basicInfo)
+  const [fullName, setFullName] = useState(basicInfo.getName())
+
+  const onButtonClick = (info) => () => {
+    setFullName(info.getName())
+    setRenderState(info)
+  }
 
   return (
-    <>
+    <div className='container'>
+      <div className='form-container'>
+        <General generalInfo={renderState}/>
+        <Experience />
+        <Education />
+        <button onClick={onButtonClick(renderState)}
+        >Submit</button>
+      </div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Resume generalInfo={renderState}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
