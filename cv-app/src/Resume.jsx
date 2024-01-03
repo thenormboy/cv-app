@@ -9,7 +9,11 @@ export default function Resume({generalInfo}) {
         <div className='resume-container'>
             <div className="resume-header">
                 <div className="resume-name">{ generalInfo.getName() }</div>
-                <div className="resume-contact"></div>
+                <div className="resume-contact">
+                    <div>{generalInfo.getEmail()}</div>
+                    <div>{generalInfo.getPhone()}</div>
+                    <div>{generalInfo.getAddress()}</div>
+                </div>
             </div>
             <div className="resume-experience"></div>
             <div className="resume-education"></div>
