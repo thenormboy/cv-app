@@ -32,6 +32,55 @@ const generalItem = (name, email, phone, address) => {
     }
 }
 
+const experienceItem = (name, title, start, end, location, description) => {
+    const getName = () => name;
+    const getTitle = () => title;
+    const getStart = () => start;
+    const getEnd = () => end;
+    const getLocation = () => location;
+    const getDescription = () => description
+
+    const setName = (newName) => {
+        name = newName
+    }
+
+    const setTitle = (newTitle) => {
+        title = newTitle
+    }
+
+    const setStart = (newStart) => {
+        start = newStart
+    }
+
+    const setEnd = (newEnd) => {
+        end = newEnd
+    }
+
+    const setLocation = (newLocation) => {
+        location =newLocation
+    }
+
+    const setDescription = (newDescription) => {
+        description = newDescription
+    }
+
+    return {
+        getName,
+        getTitle,
+        getStart,
+        getEnd,
+        getLocation,
+        getDescription,
+        setName,
+        setTitle,
+        setStart,
+        setEnd,
+        setLocation,
+        setDescription
+    }
+}
+
 export {
-    generalItem
+    generalItem,
+    experienceItem
 }

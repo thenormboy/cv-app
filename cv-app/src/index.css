@@ -169,3 +169,13 @@ button {
   gap: 40px;
 }
 
+.date-section {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.date-section div {
+  display: flex;
+  flex-direction: column;
+}
