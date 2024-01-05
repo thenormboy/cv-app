@@ -17,8 +17,8 @@ export default function Experience({experienceItemArray}) {
                 Experience
             </h2>
             <div className="experience-input">
-                {experienceItemArray.map((info) => {
-                    return <ListEducation key={info.getName()} experienceInfo={info} />
+                {experienceItemArray.map((info, index) => {
+                    return <ListExperience key={index} experienceInfo={info} />
                 })}
             </div>
             <button onClick={onButtonClick}>Add Company</button>
@@ -27,7 +27,7 @@ export default function Experience({experienceItemArray}) {
     )
 }
 
-function ListEducation(experienceInfo) {
+function ListExperience(experienceInfo) {
 
     const [companyName, setCompanyName] = useState()
     const [jobTitle, setJobTitle] = useState()

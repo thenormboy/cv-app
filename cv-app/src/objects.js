@@ -80,7 +80,49 @@ const experienceItem = (name, title, start, end, location, description) => {
     }
 }
 
+const educationItem = (name, degree, start, end, location) => {
+    const getName = () => name;
+    const getDegree = () => degree;
+    const getStart = () => start;
+    const getEnd = () => end;
+    const getLocation = () => location;
+
+    const setName = (newName) => {
+        name = newName
+    }
+
+    const setDegree = (newDegree) => {
+        degree = newDegree
+    }
+
+    const setStart = (newStart) => {
+        start = newStart
+    }
+
+    const setEnd = (newEnd) => {
+        end = newEnd
+    }
+
+    const setLocation = (newLocation) => {
+        location =newLocation
+    }
+
+    return {
+        getName,
+        getDegree,
+        getStart,
+        getEnd,
+        getLocation,
+        setName,
+        setDegree,
+        setStart,
+        setEnd,
+        setLocation
+    }
+}
+
 export {
     generalItem,
-    experienceItem
+    experienceItem,
+    educationItem
 }

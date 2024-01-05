@@ -6,6 +6,7 @@ import Resume from './Resume.jsx'
 
 import { generalItem } from './objects.js'
 import { experienceItem } from './objects.js'
+import { educationItem } from './objects.js'
 import './index.css'
 
 let basicInfo = generalItem('Example Name','example@email.com','(123) 456-7890','City, Province')
@@ -13,6 +14,10 @@ let basicInfo = generalItem('Example Name','example@email.com','(123) 456-7890',
 let works = []
 
 works.push(experienceItem('Example Inc'))
+
+let schools = [];
+
+schools.push(educationItem('Example University', 'Example Degree', 'mo/year', 'mo/year', 'Whoville, NA'));
 
 function App() {
 
@@ -35,7 +40,7 @@ function App() {
       <div className='form-container'>
         <General generalInfo={renderState}/>
         <Experience experienceItemArray={works}/>
-        <Education />
+        <Education educationItemArray={schools}/>
         <button onClick={onButtonClick(renderState)}
         >Submit</button>
       </div>
