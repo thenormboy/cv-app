@@ -83,8 +83,9 @@ button {
 }
 
 .general-container {
-  display: block;
+  display: flex;
   flex-direction: column;
+  gap: 4px;
 
   background-color: #fff;
   color: black;

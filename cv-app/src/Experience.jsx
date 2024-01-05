@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { experienceItem } from "./objects.js"
-
-let works = []
-
-works.push(experienceItem('Example Inc'))
+import { experienceItem } from "./objects";
 
 export default function Experience({experienceItemArray}) {
 
-    experienceItemArray = works
+    const [components, setComponents] = useState(experienceItemArray)
+
+    function onButtonClick() {
+        experienceItemArray.push(experienceItem())
+        setComponents([...components])
+    }
 
     return (
         <>
@@ -20,7 +21,7 @@ export default function Experience({experienceItemArray}) {
                     return <ListEducation key={info.getName()} experienceInfo={info} />
                 })}
             </div>
-            <button>Add Company</button>
+            <button onClick={onButtonClick}>Add Company</button>
         </div>
         </>
     )

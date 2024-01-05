@@ -5,9 +5,14 @@ import Experience from './Experience.jsx'
 import Resume from './Resume.jsx'
 
 import { generalItem } from './objects.js'
+import { experienceItem } from './objects.js'
 import './index.css'
 
 let basicInfo = generalItem('Example Name','example@email.com','(123) 456-7890','City, Province')
+
+let works = []
+
+works.push(experienceItem('Example Inc'))
 
 function App() {
 
@@ -29,7 +34,7 @@ function App() {
     <div className='container'>
       <div className='form-container'>
         <General generalInfo={renderState}/>
-        <Experience />
+        <Experience experienceItemArray={works}/>
         <Education />
         <button onClick={onButtonClick(renderState)}
         >Submit</button>
