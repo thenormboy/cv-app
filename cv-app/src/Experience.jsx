@@ -16,7 +16,7 @@ export default function Experience({experienceItemArray}) {
             <h2>
                 Experience
             </h2>
-            <div className="input-container">
+            <div className="experience-input">
                 {experienceItemArray.map((info) => {
                     return <ListEducation key={info.getName()} experienceInfo={info} />
                 })}
@@ -34,64 +34,66 @@ function ListEducation(experienceInfo) {
     const [startDate, setStartDate] = useState()
     const [endDate, setEndDate] = useState()
     const [location, setLocation] = useState()
-    const [descriptopn, setDescription] = useState()
+    const [description, setDescription] = useState()
 
     return (
         <>
-        <label htmlFor='company-name'>Name of Company</label>
-        <input type="text" id="company-name" placeholder="Example Inc." 
-            onChange={(e) => {
-                setCompanyName(e.target.value);
-                experienceInfo.setName(e.target.value)
-                }
-            }    
-        /> 
-        <label htmlFor='job-title'>Job Title</label>
-        <input type="text" id="job-title" placeholder="Job Title" 
-            onChange={(e) => {
-                setJobTitle(e.target.value);
-                experienceInfo.setTitle(e.target.value)
-                }
-            }    
-        />
-        <div className="date-section">
-            <div>
-                <label htmlFor='start-date'>Start Date</label>
-                <input type="text" id="start-date" placeholder="Month/Yr" 
-                    onChange={(e) => {
-                        setStartDate(e.target.value);
-                        experienceInfo.setStart(e.target.value)
-                        }
-                    }    
-                />  
+        <div className="input-section">
+            <label htmlFor='company-name'>Name of Company</label>
+            <input type="text" id="company-name" placeholder="Example Inc." 
+                onChange={(e) => {
+                    setCompanyName(e.target.value);
+                    experienceInfo.setName(e.target.value)
+                    }
+                }    
+            /> 
+            <label htmlFor='job-title'>Job Title</label>
+            <input type="text" id="job-title" placeholder="Job Title" 
+                onChange={(e) => {
+                    setJobTitle(e.target.value);
+                    experienceInfo.setTitle(e.target.value)
+                    }
+                }    
+            />
+            <div className="date-section">
+                <div>
+                    <label htmlFor='start-date'>Start Date</label>
+                    <input type="text" id="start-date" placeholder="Month/Yr" 
+                        onChange={(e) => {
+                            setStartDate(e.target.value);
+                            experienceInfo.setStart(e.target.value)
+                            }
+                        }    
+                    />  
+                </div>
+                <div>
+                    <label htmlFor='end-date'>End Date</label>
+                    <input type="text" id="end-date" placeholder="Month/Yr" 
+                        onChange={(e) => {
+                            setEndDate(e.target.value);
+                            experienceInfo.setEnd(e.target.value)
+                            }
+                        }    
+                    />
+                </div>
             </div>
-            <div>
-                <label htmlFor='end-date'>End Date</label>
-                <input type="text" id="end-date" placeholder="Month/Yr" 
-                    onChange={(e) => {
-                        setEndDate(e.target.value);
-                        experienceInfo.setEnd(e.target.value)
-                        }
-                    }    
-                />
-            </div>
-        </div>
-        <label htmlFor='location'>Location</label>
-        <input type="text" id="location" placeholder="City, Province" 
-            onChange={(e) => {
-                setLocation(e.target.value);
-                experienceInfo.setLocation(e.target.value)
-                }
-            }    
-        />
-        <label htmlFor='description'>Role Description</label>
-        <textarea type="text" rows='6' id="description" placeholder="Describe your role" 
-            onChange={(e) => {
-                setDescription(e.target.value);
-                experienceInfo.setDescription(e.target.value)
-                }
-            }    
-        />    
+            <label htmlFor='location'>Location</label>
+            <input type="text" id="location" placeholder="City, Province" 
+                onChange={(e) => {
+                    setLocation(e.target.value);
+                    experienceInfo.setLocation(e.target.value)
+                    }
+                }    
+            />
+            <label htmlFor='description'>Role Description</label>
+            <textarea type="text" rows='6' id="description" placeholder="Describe your role" 
+                onChange={(e) => {
+                    setDescription(e.target.value);
+                    experienceInfo.setDescription(e.target.value)
+                    }
+                }    
+            />
+        </div>    
         </>
     )
 }

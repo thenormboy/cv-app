@@ -12,6 +12,7 @@ export default function General({generalInfo}) {
         <form className="general-container">
             <h2>General Info</h2>
             <div className="input-container">
+                <div>
                 <label htmlFor='full-name'>Full Name</label>
                 <input type="text" id="full-name" placeholder="First and Last Name" 
                     onChange={(e) => {
@@ -43,7 +44,8 @@ export default function General({generalInfo}) {
                         generalInfo.setAddress(e.target.value)
                         }
                     }
-                />   
+                />
+                </div>   
             </div>
         </form>
         </>

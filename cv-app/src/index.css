@@ -102,8 +102,31 @@ button {
   flex-direction: column;
   flex-grow: 1;
 
+  gap: 44px;
+  margin-bottom: 12px;
+}
+
+.input-container div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
   gap: 6px;
   margin-bottom: 12px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.input-section input {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 10px;
+  transition: border .25s, black .25s;
 }
 
 .input-container input{
@@ -111,6 +134,14 @@ button {
   border-radius: 12px;
   padding: 10px;
   transition: border .25s, black .25s;
+}
+
+.experience-input {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+
+  margin-bottom: 20px;
 }
 
 .education-button {
