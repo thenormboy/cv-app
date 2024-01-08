@@ -27,7 +27,7 @@ export default function Education({educationItemArray}) {
     )
 }
 
-function ListEducation(educationInfo) {
+function ListEducation({educationInfo}) {
     const [schoolName, setSchoolName] = useState()
     const [degreeTitle, setDegreeTitle] = useState()
     const [startDate, setStartDate] = useState()

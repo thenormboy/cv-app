@@ -13,7 +13,7 @@ let basicInfo = generalItem('Example Name','example@email.com','(123) 456-7890',
 
 let works = []
 
-works.push(experienceItem('Example Inc'))
+works.push(experienceItem('Example Inc.', 'Janitor', 'Feb/2023', 'Mar/2024', 'Raleigh, NC', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'))
 
 let schools = [];
 
@@ -45,7 +45,7 @@ function App() {
         >Submit</button>
       </div>
       <div>
-        <Resume generalInfo={renderState}/>
+        <Resume generalInfo={renderState} experienceInfo={works}/>
       </div>
     </div>
   )

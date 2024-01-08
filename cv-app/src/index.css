@@ -166,13 +166,12 @@ button {
 
 .resume-container {
   background-color: white;
-  
 
   height: 29.7cm;
   width: 21cm;
 
-  display: grid;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
 }
 
 .resume-header {
@@ -183,7 +182,6 @@ button {
   justify-content: center;
   gap: 12px;
 
-  border: 1px solid black;
   color: black;
 
   margin: 24px 48px;
@@ -210,4 +208,34 @@ button {
 .date-section div {
   display: flex;
   flex-direction: column;
+}
+
+.resume-experience {
+  border: 1px solid black;
+  color: black;
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.employment-cell {
+  display: flex;
+}
+
+.employment-date {
+  min-width: 180px;
+}
+
+.employment-description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.employment-location {
+  min-width: 100px;
+  margin-left: 24px;
+}
+
+.employment-title {
+  font-weight:700;
 }

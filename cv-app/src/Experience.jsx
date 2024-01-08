@@ -27,7 +27,7 @@ export default function Experience({experienceItemArray}) {
     )
 }
 
-function ListExperience(experienceInfo) {
+function ListExperience({experienceInfo}) {
 
     const [companyName, setCompanyName] = useState()
     const [jobTitle, setJobTitle] = useState()
