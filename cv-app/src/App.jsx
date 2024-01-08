@@ -41,12 +41,12 @@ function App() {
       <div className='form-container'>
         <General generalInfo={elements[0]}/>
         <Experience experienceItemArray={elements[1]}/>
-        <Education educationItemArray={schools}/>
-        <button onClick={() => {setReload(true); }}
+        <Education educationItemArray={elements[2]}/>
+        <button className='submit-button' onClick={() => {setReload(true); }}
         >Submit</button>
       </div>
       <div>
-        <Resume generalInfo={elements[0]} experienceInfo={elements[1]}/>
+        <Resume generalInfo={elements[0]} experienceInfo={elements[1]} educationInfo={elements[2]}/>
       </div>
     </div>
   )

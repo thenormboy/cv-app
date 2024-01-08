@@ -1,4 +1,4 @@
-export default function Resume({generalInfo, experienceInfo}) {
+export default function Resume({generalInfo, experienceInfo, educationInfo}) {
 
     return (
         <>
@@ -19,7 +19,14 @@ export default function Resume({generalInfo, experienceInfo}) {
                     )
                 })}
             </div>
-            <div className="resume-education"></div>
+            <div className="resume-education">
+                <h3>Education</h3>
+                {educationInfo.map((info, index) => {
+                    return (
+                        <ResumeEducation key={index} schoolCell={info} />
+                    )
+                })}
+            </div>
         </div>
         </>
     )
@@ -35,6 +42,18 @@ function ResumeExperience({employmentCell}) {
                 <div>{employmentCell.getDescription()}</div>
             </div>
             <div className="employment-location">{employmentCell.getLocation()}</div>
+        </div>
+        </>
+    )
+}
+
+function ResumeEducation({schoolCell}) {
+    return (
+        <>
+        <div className="school-cell">
+            <div className="school-date">{schoolCell.getStart()} - {schoolCell.getEnd()}</div>
+            <div className="school-title">{schoolCell.getDegree()}, {schoolCell.getName()}</div>
+            <div className="school-location">{schoolCell.getLocation()}</div>
         </div>
         </>
     )

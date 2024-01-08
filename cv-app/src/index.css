@@ -211,7 +211,6 @@ button {
 }
 
 .resume-experience {
-  border: 1px solid black;
   color: black;
   margin-left: 48px;
   margin-right: 48px;
@@ -229,6 +228,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  flex-grow: 2;
 }
 
 .employment-location {
@@ -238,4 +239,32 @@ button {
 
 .employment-title {
   font-weight:700;
+}
+
+.resume-education {
+  color: black;
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.school-cell {
+  display: flex;
+}
+
+.school-date {
+  min-width: 180px;
+}
+
+.school-title {
+  font-weight: 600;
+  flex-grow: 2;
+}
+
+.school-location {
+  min-width: 100px;
+  margin-left: 24px;
+}
+
+.submit-button {
+  border: 1px solid white;
 }
