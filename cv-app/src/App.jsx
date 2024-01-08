@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import General from './General.jsx'
 import Education from './Education.jsx'
 import Experience from './Experience.jsx'
@@ -19,33 +19,34 @@ let schools = [];
 
 schools.push(educationItem('Example University', 'Example Degree', 'mo/year', 'mo/year', 'Whoville, NA'));
 
+let allInfo = [basicInfo, works, schools]
+
 function App() {
 
-  const [renderState, setRenderState] = useState(basicInfo)
-  const [fullName, setFullName] = useState(basicInfo.getName())
-  const [email, setEmail] = useState(basicInfo.getEmail())
-  const [phone, setPhone] = useState(basicInfo.getPhone())
-  const [address, setAddress] = useState(basicInfo.getAddress())
+  let allInfoUpdated = []
 
-  const onButtonClick = (info) => () => {
-    setFullName(info.getName())
-    setEmail(info.getEmail())
-    setPhone(info.getPhone())
-    setAddress(info.getAddress())
-    setRenderState(info)
-  }
+  const [reload, setReload] = useState(true)
+  const [elements, setElements] = useState(allInfo)
+
+  useEffect(() => {
+    if (reload) {
+      allInfoUpdated = allInfo
+      setElements(allInfoUpdated)
+    }
+    setReload(false);
+  }, [elements, reload]);
 
   return (
     <div className='container'>
       <div className='form-container'>
-        <General generalInfo={renderState}/>
-        <Experience experienceItemArray={works}/>
+        <General generalInfo={elements[0]}/>
+        <Experience experienceItemArray={elements[1]}/>
         <Education educationItemArray={schools}/>
-        <button onClick={onButtonClick(renderState)}
+        <button onClick={() => {setReload(true); }}
         >Submit</button>
       </div>
       <div>
-        <Resume generalInfo={renderState} experienceInfo={works}/>
+        <Resume generalInfo={elements[0]} experienceInfo={elements[1]}/>
       </div>
     </div>
   )
